@@ -152,9 +152,14 @@
         <h2>Unsubscribe/Options</h2>
         <p>If you are already a member and wish to unsubscribe, or change any of your settings, fill in your email below. We'll send an email to confirm.</p>
 
-        <form action="#" method="post" accept-charset="utf-8">
-          <ul>
-            <li><input type="text" name="email" value="" id="email" placeholder="you@example.com"> <input type="submit" value="Unsubscribe/Send Options"></p></li>
+
+        <MM-Options-Form-Start>
+        <ul>
+            <li>
+                <input type="text" name="email" value="" id="email" placeholder="you@example.com">
+                <input name="language" type="hidden" value="en">
+                <input type="submit" name="UserOptions" value="Unsubscribe/Send Options">
+            </i>
           </ul>
         </form>
 
