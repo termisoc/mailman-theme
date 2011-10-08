@@ -1,0 +1,133 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <title><MM-List-Name> Subscription Results</title>
+        
+    <style type="text/css" media="screen">
+      /* a crude reset, just for the elements we use */
+      html, body, div, header, article, section, footer, ul, li {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        outline: 0;
+        font-weight: inherit;
+        font-style: inherit;
+        font-size: 100%;
+        font-family: inherit;
+        vertical-align: baseline;
+      }
+      body {
+        line-height: 1;
+        color: black;
+        background: white;
+      }
+      /* and on with the show... */
+      body {
+        font: normal 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+        line-height: 1.5em;
+      }
+
+      h1, h2, h3, h4 {
+       font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif;
+       line-height: 1.5em;
+       margin: 0.7215007%; /* 5px / 693px */
+       font-weight: bold;
+      }
+      
+      p {
+       font-size: 0.875em; /* 14px / 16px */
+       line-height: 1.25em;
+       margin: 0.7215007%; /* 5px /  693px */
+      }
+
+      #page {
+        width: 60%; /* approximately 693px */
+        margin: 0 auto;
+        padding-top: 1.5%;
+      }
+
+      header {
+        text-align: center;
+      }
+
+      article {
+        font-style: italic;
+        background-color: #DCDCDC;
+        padding: 1.5082956%; /* 10px / 663px */
+        margin: 1.4430014%; /* 10px / 693px */
+      }
+
+      section#subscribe {
+        width: 50%;
+        float: left;
+      }
+
+      section#unsubscribe {
+        width: 50%;
+        float: right;
+      }
+
+      footer {
+        clear: both;
+      }
+  
+      form {
+        margin: 5.7720058%; /* 20px  / 346.5px  */
+      }
+
+      form li {
+        list-style-type: none;
+        padding: 5px;
+      }
+
+      form label {
+        width: 27.7324633%; /* 85px / 306.5px */
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      form label.inline {
+        width: 0;
+        display: inline;
+        padding: 3.2626427%; /* 10px / 306.5px */
+      }
+
+      form li.note {
+        background-color: #ECECEC;
+      }
+
+      p.note {
+        font-size: 0.6875em; /* 11px / 16px */ 
+        line-height: 1.03125em; /* 1.5 * (11px / 16px) */
+        font-style: italic;
+      }
+
+      hr {
+        height: 1px;
+        border: 0;
+        color: #DCDCDC;
+        background-color: #DCDCDC;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="page">
+      <header>
+        <h1><MM-List-Name> Subscription Results</h1>
+      </header>
+
+      <section>
+        <p><MM-Results></p>
+      </section>
+
+      <footer>
+        <hr>
+        <p>Delivered by <a href="http://lists.org/">Mailman</a>. Made a bit prettier by <a href="http://github.com/termisoc/mailman-theme">TermiSoc</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
