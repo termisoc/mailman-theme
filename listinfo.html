@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     
-    <title>General List Information</title>
+    <title><MM-List-Name> Info Page</title>
         
     <style type="text/css" media="screen">
       /* a crude reset, just for the elements we use */
@@ -117,23 +117,23 @@
   <body>
     <div id="page">
       <header>
-        <h1>List Name</h1>
+        <h1><MM-List-Name></h1>
       </header>
 
       <article>
-        <p>This burb is all about the list. It's assumed you'd have a long description explaining what the list is all about. But, if you don't, it'd cope too.</p>
+        <p><MM-List-Description> <MM-Archive>Browse the Archives</MM-Archive></p>
       </article>
 
       <section id="subscribe">
         <h2>Subscribe</h2>
         <p>If you fill in the form below, you'll be sent an email to confirm.</p>
 
-        <form action="#" method="post" accept-charset="utf-8">
+        <MM-Subscribe-Form-Start>
           <ul>
-            <li><label for="name">Name: </label><input type="text" name="name" value="" id="name" placeholder="You"></li>
-            <li><label for="email">Email: </label><input type="text" name="email" value="" id="email" placeholder="you@example.com"></li>
-            <li class="note"><label for="password">Password: </label><input type="password" name="password" value="" id="password"></li>
-            <li class="note"><label for="confirm">Confirm: </label><input type="password" name="confirm" value="" id="confirm">
+            <li><label for="name">Name: </label><MM-Fullname-Box></li>
+            <li><label for="email">Email: </label><MM-Subscribe-Box></li>
+            <li class="note"><label for="password">Password: </label><MM-New-Password-Box></li>
+            <li class="note"><label for="confirm">Confirm: </label><MM-Confirm-Password>
             <p class="note">Please don't use anything sensitive here. It is stored in plain text, and will be emailed to you.</p>
             </li>
             <li>
@@ -142,8 +142,9 @@
                <label class="inline" for="yes">Yes</label><input type="radio" name="digest" value="1" id="yes">
             </li>
 
-            <li><input type="submit" value="Subscribe"></li>
+            <li><MM-Subscribe-Button></li>
           </ul>
+          <MM-form-end>
         </form>
       </section>
 
