@@ -7,7 +7,110 @@
     <title>General List Information</title>
         
     <style type="text/css" media="screen">
-            
+      /* a crude reset, just for the elements we use */
+      html, body, div, header, article, section, footer, ul, li {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        outline: 0;
+        font-weight: inherit;
+        font-style: inherit;
+        font-size: 100%;
+        font-family: inherit;
+        vertical-align: baseline;
+      }
+      body {
+        line-height: 1;
+        color: black;
+        background: white;
+      }
+      /* and on with the show... */
+      body {
+        font: normal 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+        line-height: 1.5em;
+      }
+
+      h1, h2, h3, h4 {
+       font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif;
+       line-height: 1.5em;
+       margin: 0.7215007%; /* 5px / 693px */
+       font-weight: bold;
+      }
+      
+      p {
+       font-size: 0.875em; /* 14px / 16px */
+       line-height: 1.25em;
+       margin: 0.7215007%; /* 5px /  693px */
+      }
+
+      #page {
+        width: 60%; /* approximately 693px */
+        margin: 0 auto;
+        padding-top: 1.5%;
+      }
+
+      header {
+        text-align: center;
+      }
+
+      article {
+        font-style: italic;
+        background-color: #DCDCDC;
+        padding: 1.5082956%; /* 10px / 663px */
+        margin: 1.4430014%; /* 10px / 693px */
+      }
+
+      section#subscribe {
+        width: 50%;
+        float: left;
+      }
+
+      section#unsubscribe {
+        width: 50%;
+        float: right;
+      }
+
+      footer {
+        clear: both;
+      }
+  
+      form {
+        margin: 5.7720058%; /* 20px  / 346.5px  */
+      }
+
+      form li {
+        list-style-type: none;
+        padding: 5px;
+      }
+
+      form label {
+        width: 27.7324633%; /* 85px / 306.5px */
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      form label.inline {
+        width: 0;
+        display: inline;
+        padding: 3.2626427%; /* 10px / 306.5px */
+      }
+
+      form li.note {
+        background-color: #ECECEC;
+      }
+
+      p.note {
+        font-size: 0.6875em; /* 11px / 16px */ 
+        line-height: 1.03125em; /* 1.5 * (11px / 16px) */
+        font-style: italic;
+      }
+
+      hr {
+        height: 1px;
+        border: 0;
+        color: #DCDCDC;
+        background-color: #DCDCDC;
+      }
     </style>
   </head>
 
@@ -22,15 +125,22 @@
       </article>
 
       <section id="subscribe">
+        <h2>Subscribe</h2>
         <p>If you fill in the form below, you'll be sent an email to confirm.</p>
 
         <form action="#" method="post" accept-charset="utf-8">
           <ul>
-            <li><label for="name">Name: </label><input type="text" name="name" value="" id="name"></li>
-            <li><label for="email">Email: </label><input type="text" name="email" value="" id="email"></li>
-            <li><label for="password">Password: </label><input type="password" name="password" value="" id="password"></li>
-            <li><label for="confirm">Confirm: </label><input type="password" name="confirm" value="" id="confirm"></li>
-            <li><label for="digest">Just get a digest? </label></li>
+            <li><label for="name">Name: </label><input type="text" name="name" value="" id="name" placeholder="You"></li>
+            <li><label for="email">Email: </label><input type="text" name="email" value="" id="email" placeholder="you@example.com"></li>
+            <li class="note"><label for="password">Password: </label><input type="password" name="password" value="" id="password"></li>
+            <li class="note"><label for="confirm">Confirm: </label><input type="password" name="confirm" value="" id="confirm">
+            <p class="note">Please don't use anything sensitive here. It is stored in plain text, and will be emailed to you.</p>
+            </li>
+            <li>
+              Just get a digest?
+               <label class="inline" for="no">No</label><input type="radio" name="digest" value="0" id="no" selected>
+               <label class="inline" for="yes">Yes</label><input type="radio" name="digest" value="1" id="yes">
+            </li>
 
             <li><input type="submit" value="Subscribe"></li>
           </ul>
@@ -38,18 +148,22 @@
       </section>
 
       <section id="unsubscribe">
-        <p>If you are already a member and wish to unsubscribe, or change any of yuor settings, fill in your email below. We'll send an email to confirm.</p>
+        <h2>Unsubscribe/Options</h2>
+        <p>If you are already a member and wish to unsubscribe, or change any of your settings, fill in your email below. We'll send an email to confirm.</p>
 
         <form action="#" method="post" accept-charset="utf-8">
           <ul>
             <li><input type="text" name="email" value="" id="email" placeholder="you@example.com"> <input type="submit" value="Unsubscribe/Send Options"></p></li>
           </ul>
         </form>
+
+        <h2>Problems?</h2>
+        <p>If you have any issues, or possibly have something to tell the administrator about, you can email them directly here: admin@example.com.</p>
       </section>
 
-      <hr>
       <footer>
-        <p>Delivered by Mailman</p>
+        <hr>
+        <p>Delivered by <a href="http://lists.org/">Mailman</a>. Made a bit prettier by <a href="http://github.com/termisoc/mailman-theme">TermiSoc</a>.</p>
       </footer>
     </div>
   </body>
