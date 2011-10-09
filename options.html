@@ -149,28 +149,26 @@
       </header>
 
       <article>
-        <p>This page contains all of the options you can set as a subscriber. You are currently logged in as: <input type="button" name="some_name" value="Logout"></p>
+        <p>This page contains all of the options you can set as a subscriber. You are currently logged in as: <MM-Presentable-User> <MM-Form-Start><mm-logout-button><MM-Form-End></p>
       </article>
-
+<MM-Form-Start>
       <section id="user">
         <h2>Change Your Details</h2>
       
-        <form action="#" method="post" accept-charset="utf-8">
             <ul>
                 <li>
-                    <label for="name">Name: </label><input type="text" name="name" value="" id="name">
+                    <label for="name">Name: </label><mm-fullname-box>
                 </li>
                 <li>
-                    <label for="email">Email: </label><input type="text" name="email" value="" id="email">
+                    <label for="email">Email: </label><mm-new-address-box>
                 </li>
                 <li>
-                    <label for="confirm">Confirm: </label><input type="text" name="confirm" value="" id="confirm">
+                    <label for="confirm">Confirm: </label><mm-confirm-address-box>
                 </li>
                 <li>
-                    <input type="submit" name="some_name" value="Save Details">
+                    <mm-change-address-button>
                 </li>
             </ul>
-        </form>
       </section>
 
       <section id="unsubscribe">
@@ -180,13 +178,11 @@
         
         <p>If you're going because of something specific, please email the list administrator and say why.</p>
 
-        <form action="#" method="get" accept-charset="utf-8">
             <ul>
                 <li>
-                    <input type="submit" name="unsubscribe" value="Unsubscribe">
+                    <MM-Unsubscribe-Button>
                 </li>
             </ul>
-        </form>
       </section>
 
       <section id="password">
@@ -195,23 +191,22 @@
         <div id="forgotten-password">
             <h3>Forgotten your password?</h3>
 
-            <form action="#" method="get" accept-charset="utf-8">
-                <input type="submit" name="forgotten_password" value="Email My Password">
-            </form>
+            <MM-Email-My-Pw>
         </div>
 
         <div id="change-password">
            <h3>Change Your Password</h3>
-           <form action="#" method="get" accept-charset="utf-8">
                 <ul>
                     <li>
-                        <label for="password">Password: </label><input type="password" name="password" value="" id="password">
+                        <label for="password">Password: </label><MM-New-Pass-Box>
                     </li>
                     <li>
-                        <label for="confirm">Confirm: </label><input type="password" name="confirm" value="" id="confirm">
+                        <label for="confirm">Confirm: </label><MM-Confirm-Pass-Box>
+                    </li>
+                    <li>
+                        <MM-Change-Pass-Button>
                     </li>
                 </ul>
-            </form>
         </div>
       </section>
 
@@ -220,31 +215,34 @@
 
         <p>This section allows you to change your options as a subscriber. There may be other options that you can set which are not provided here. If that's the case, email the list admistrator.</p>
 
-        <form action="#" method="get" accept-charset="utf-8">
             <ul>
                 <li>
                     <label for="digest">Digest?</label>
-                    <input type="radio" name="digest" value="0">No
-                    <input type="radio" name="digest" value="1">Yes
+                    <MM-Undigest-Radio-Button>No
+                    <MM-Digest-Radio-Button>Yes
                 </li>
                 <li>
                     <label for="turn_off_emails">Turn off emails. <span class="hint">(Stop getting emails from the list until you turn it back on.)</span></label>
-                    <input type="radio" name="turn_off_emails" value="0" id="turn_off_emails">No
-                    <input type="radio" name="turn_off_emails" value="1" id="turn_off_emails">Yes
+                    <mm-delivery-enable-button>No
+                    <mm-delivery-disable-button>Yes
                 </li>
                 <li>
                     <label for="pass_rem">Get a Monthly Password Reminder?</label>
-                    <input type="radio" name="pass_rem" value="0" id="pass_rem">No
-                    <input type="radio" name="pass_rem" value="1" id="pass_rem">Yes
+                    <mm-dont-get-password-reminder-button>No
+                    <mm-get-password-reminder-button>Yes
                 </li>
                 <li>
                     <label for="avoid_dups">Avoid Duplicates? <span class="hint">(Makes sure you only recieve one message, even when you're CC'ed multiple times.)</span></label>
-                    <input type="radio" name="avoid_dups" value="0" id="avoid_dups">No
-                    <input type="radio" name="avoid_dups" value="1" id="avoid_dups">Yes
+                    <mm-receive-duplicates-button>No
+                    <mm-dont-receive-duplicates-button>Yes
+                </li>
+                <li>
+                    <MM-options-Submit-button>
                 </li>
             </ul>
-        </form>        
       </section>
+
+<MM-Form-End>
 
       <footer>
         <hr>
