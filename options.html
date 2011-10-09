@@ -1,0 +1,255 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <title><MM-Presentable-User>'s Options.</title>
+        
+    <style type="text/css" media="screen">
+      /* a crude reset, just for the elements we use */
+      html, body, div, header, article, section, footer, ul, li {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        outline: 0;
+        font-weight: inherit;
+        font-style: inherit;
+        font-size: 100%;
+        font-family: inherit;
+        vertical-align: baseline;
+      }
+      body {
+        line-height: 1;
+        color: black;
+        background: white;
+      }
+      /* and on with the show... */
+      body {
+        font: normal 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+        line-height: 1.5em;
+      }
+
+      h1, h2, h3, h4 {
+       font-family: Garamond, "Hoefler Text", "Times New Roman", Times, serif;
+       line-height: 1.5em;
+       margin: 0.7215007%; /* 5px / 693px */
+       font-weight: bold;
+      }
+      
+      p {
+       font-size: 0.875em; /* 14px / 16px */
+       line-height: 1.25em;
+       margin: 0.7215007%; /* 5px /  693px */
+      }
+
+      #page {
+        width: 60%; /* approximately 693px */
+        margin: 0 auto;
+        padding-top: 1.5%;
+      }
+
+      header {
+        text-align: center;
+      }
+
+      article {
+        font-style: italic;
+        background-color: #DCDCDC;
+        padding: 1.5082956%; /* 10px / 663px */
+        margin: 1.4430014%; /* 10px / 693px */
+      }
+
+      section#user {
+        width: 50%;
+        float: left;
+      }
+
+      section#unsubscribe {
+        width: 50%;
+        float: right;
+      }
+
+      section#password {
+        clear: both;  
+      }
+
+      div#forgotten-password {
+        width: 50%;
+        float: left;
+      }
+
+      div#change-password {
+        width: 50%;
+        float: right;
+      }
+
+      section#options {
+        clear: both;  
+      }
+
+      section#options label {
+         width: 48.9396411%; /* 150px / 306.5px */ 
+      }
+
+      section#options label span.hint {
+        font-style: italic;
+        font-size: 0.6875em; /* 10px / 16px */
+        line-height: 1.03125em;
+      }
+
+      footer {
+        clear: both;
+      }
+  
+      form {
+        margin: 5.7720058%; /* 20px  / 346.5px  */
+      }
+
+      form li {
+        list-style-type: none;
+        padding: 5px;
+      }
+
+      form label {
+        width: 27.7324633%; /* 85px / 306.5px */
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      form label.inline {
+        width: 0;
+        display: inline;
+        padding: 3.2626427%; /* 10px / 306.5px */
+      }
+
+      form li.note {
+        background-color: #ECECEC;
+      }
+
+      p.note {
+        font-size: 0.6875em; /* 11px / 16px */ 
+        line-height: 1.03125em; /* 1.5 * (11px / 16px) */
+        font-style: italic;
+      }
+
+      hr {
+        height: 1px;
+        border: 0;
+        color: #DCDCDC;
+        background-color: #DCDCDC;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="page">
+      <header>
+        <h1><MM-Presentable-User>'s Options</h1>
+      </header>
+
+      <article>
+        <p>This page contains all of the options you can set as a subscriber. You are currently logged in as: <input type="button" name="some_name" value="Logout"></p>
+      </article>
+
+      <section id="user">
+        <h2>Change Your Details</h2>
+      
+        <form action="#" method="post" accept-charset="utf-8">
+            <ul>
+                <li>
+                    <label for="name">Name: </label><input type="text" name="name" value="" id="name">
+                </li>
+                <li>
+                    <label for="email">Email: </label><input type="text" name="email" value="" id="email">
+                </li>
+                <li>
+                    <label for="confirm">Confirm: </label><input type="text" name="confirm" value="" id="confirm">
+                </li>
+                <li>
+                    <input type="submit" name="some_name" value="Save Details">
+                </li>
+            </ul>
+        </form>
+      </section>
+
+      <section id="unsubscribe">
+        <h2>Unsubscribe</h2>
+
+        <p>It'd be sad to see you go. But, if you hit the button below, you'll be unsubscribed.</p>
+        
+        <p>If you're going because of something specific, please email the list administrator and say why.</p>
+
+        <form action="#" method="get" accept-charset="utf-8">
+            <ul>
+                <li>
+                    <input type="submit" name="unsubscribe" value="Unsubscribe">
+                </li>
+            </ul>
+        </form>
+      </section>
+
+      <section id="password">
+        <h2>Password</h2>
+
+        <div id="forgotten-password">
+            <h3>Forgotten your password?</h3>
+
+            <form action="#" method="get" accept-charset="utf-8">
+                <input type="submit" name="forgotten_password" value="Email My Password">
+            </form>
+        </div>
+
+        <div id="change-password">
+           <h3>Change Your Password</h3>
+           <form action="#" method="get" accept-charset="utf-8">
+                <ul>
+                    <li>
+                        <label for="password">Password: </label><input type="password" name="password" value="" id="password">
+                    </li>
+                    <li>
+                        <label for="confirm">Confirm: </label><input type="password" name="confirm" value="" id="confirm">
+                    </li>
+                </ul>
+            </form>
+        </div>
+      </section>
+
+      <section id="options">
+        <h2>Set Options</h2>
+
+        <p>This section allows you to change your options as a subscriber. There may be other options that you can set which are not provided here. If that's the case, email the list admistrator.</p>
+
+        <form action="#" method="get" accept-charset="utf-8">
+            <ul>
+                <li>
+                    <label for="digest">Digest?</label>
+                    <input type="radio" name="digest" value="0">No
+                    <input type="radio" name="digest" value="1">Yes
+                </li>
+                <li>
+                    <label for="turn_off_emails">Turn off emails. <span class="hint">(Stop getting emails from the list until you turn it back on.)</span></label>
+                    <input type="radio" name="turn_off_emails" value="0" id="turn_off_emails">No
+                    <input type="radio" name="turn_off_emails" value="1" id="turn_off_emails">Yes
+                </li>
+                <li>
+                    <label for="pass_rem">Get a Monthly Password Reminder?</label>
+                    <input type="radio" name="pass_rem" value="0" id="pass_rem">No
+                    <input type="radio" name="pass_rem" value="1" id="pass_rem">Yes
+                </li>
+                <li>
+                    <label for="avoid_dups">Avoid Duplicates? <span class="hint">(Makes sure you only recieve one message, even when you're CC'ed multiple times.)</span></label>
+                    <input type="radio" name="avoid_dups" value="0" id="avoid_dups">No
+                    <input type="radio" name="avoid_dups" value="1" id="avoid_dups">Yes
+                </li>
+            </ul>
+        </form>        
+      </section>
+
+      <footer>
+        <hr>
+        <p>Delivered by <a href="http://lists.org/">Mailman</a>. Made a bit prettier by <a href="http://github.com/termisoc/mailman-theme">TermiSoc</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

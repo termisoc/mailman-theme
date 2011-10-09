@@ -6,6 +6,8 @@ The intention wasn't to mimic the general design used by TermiSoc, but to provid
 
 It also doesn't intend to be responsive, or rely on complex CSS. Everything required is contained within each file, so there was a desire to keep it simple. But, it is on a fluid grid.
 
+You'll also find (especially in the user options) that not all of the possible options are implemented. Only what was needed is working.
+
 ## Contributing
 
 Clone it. Make your changes. Send a pull request. Don't change version numbers or add tags.
